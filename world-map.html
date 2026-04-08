@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>GlobeTrotter - Destinații Mondiale</title>
+    <link rel="stylesheet" href="stil.css">
+    <style>
+        /* Stiluri specifice pentru grila de continente */
+        .grid-continente {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 50px 10%;
+            background-color: var(--fundal-crem);
+        }
+
+        .continent-card {
+            background-color: var(--maro-inchis);
+            height: 250px;
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: transform 0.3s;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+        }
+
+        .continent-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--verde-masliniu);
+        }
+
+        .continent-card h2 {
+            font-size: 2.5rem;
+            z-index: 2;
+        }
+
+        .continent-card p {
+            z-index: 2;
+            font-style: italic;
+            color: var(--fundal-crem);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-section">
+        <img src="imagini/foto0.png" alt="Logo GlobeTrotter" style="height: 50px;">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="Home.html">Acasă</a></li>
+            <li><a href="world-map.html">Destinații</a></li>
+            <li><a href="moldova.html">Moldova</a></li>
+            <li><a href="contacte.html">Contacte</a></li>
+            <li><a href="despre.html">Despre Noi</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Harta Mondială a Destinațiilor</h1>
+    <p>Alege un continent pentru a vedea ofertele noastre speciale</p>
+</section>
+
+<div class="destinatii-titlu" style="background: var(--fundal-crem); padding: 40px 0 10px 0;">
+    <h2>Explorează Continentele</h2>
+</div>
+
+<section class="grid-continente">
+    <a href="#" class="continent-card">
+        <h2>Europa</h2>
+        <p>Istorie și Cultură</p>
+    </a>
+    <a href="#" class="continent-card">
+        <h2>Asia</h2>
+        <p>Tradiție și Viitor</p>
+    </a>
+    <a href="#" class="continent-card">
+        <h2>Africa</h2>
+        <p>Aventură în Savană</p>
+    </a>
+    <a href="#" class="continent-card">
+        <h2>America</h2>
+        <p>Peisaje de Vis</p>
+    </a>
+    <a href="#" class="continent-card">
+        <h2>Oceania</h2>
+        <p>Exotism și Relaxare</p>
+    </a>
+</section>
+
+<footer class="footer-verde">
+    <div>
+        <p><strong>Destinații:</strong></p><br>
+        <p>Harta Mondială</p>
+        <p>Excursii Populare</p>
+    </div>
+
+    <div>
+        <p><strong>Excursii:</strong></p><br>
+        <p>Moldova</p>
+        <p>Internaționale</p>
+    </div>
+
+    <div class="footer-contact-info">
+        <p><strong>Contacte:</strong></p><br>
+        <p>Email: contact@globetrotter.md</p>
+        <p>Tel: +373 22 123 456</p>
+        <p>Chișinău, Moldova</p>
+    </div>
+
+    <div class="footer-about">
+        <p><strong>Despre noi:</strong></p><br>
+        <p>Suntem o agenție de turism cu o experiență de peste 10 ani în transformarea viselor în realitate.</p>
+    </div>
+</footer>
+
+<div class="copyright">
+    © 2026 GlobeTrotter. Toate drepturile rezervate.
+</div>
+
+</body>
+</html>

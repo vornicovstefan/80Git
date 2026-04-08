@@ -1,0 +1,167 @@
+:root {
+    --verde-masliniu: #5c6b35;
+    --maro-inchis: #4a3423;
+    --fundal-crem: #e2e1cc;
+    --gri-buton: #abb29a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--fundal-crem);
+    line-height: 1.6;
+}
+
+/* Header - AM SCOS LINIILE ALBASTRE */
+header {
+    background: white;
+    display: flex;
+    align-items: center;
+    height: 90px;
+    /* Am eliminat border-bottom care facea linia albastra */
+}
+
+.logo-section {
+    width: 250px;
+    padding-left: 30px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /* Am eliminat border-right care facea linia punctata */
+}
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--maro-inchis);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Restul stilurilor raman la fel */
+.hero {
+    background-color: var(--verde-masliniu);
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.feature-box {
+    background-color: var(--gri-buton);
+    padding: 12px 20px;
+    border-radius: 10px;
+    color: #333;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.destinatii-titlu {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.container-carduri {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px 50px 60px 50px;
+    flex-wrap: wrap;
+    background-color: var(--verde-masliniu);
+}
+
+.card {
+    width: 280px;
+    background-color: var(--maro-inchis);
+    border-radius: 50px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 25px;
+    color: white;
+    text-align: center;
+}
+
+.pret {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffcc00;
+    margin: 10px 0;
+}
+
+.btn-rezerva {
+    display: inline-block;
+    background-color: var(--verde-masliniu);
+    color: white;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.footer-contact-banner {
+    background: linear-gradient(to bottom, var(--fundal-crem), #bdc3c7);
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.btn-contact-mare {
+    background-color: var(--maro-inchis);
+    color: white;
+    padding: 15px 40px;
+    border-radius: 35px;
+    text-decoration: none;
+    font-size: 20px;
+    display: inline-block;
+}
+
+.footer-verde {
+    background-color: var(--verde-masliniu);
+    color: white;
+    padding: 50px 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr 2fr;
+    gap: 20px;
+}
+
+.copyright {
+    text-align: center;
+    padding: 20px;
+    background: var(--fundal-crem);
+    font-weight: bold;
+}
