@@ -17,13 +17,13 @@ body {
     line-height: 1.6;
 }
 
-/* Header - AM SCOS LINIILE ALBASTRE */
+
 header {
     background: white;
     display: flex;
     align-items: center;
     height: 90px;
-    /* Am eliminat border-bottom care facea linia albastra */
+    
 }
 
 .logo-section {
@@ -32,7 +32,7 @@ header {
     height: 100%;
     display: flex;
     align-items: center;
-    /* Am eliminat border-right care facea linia punctata */
+    
 }
 
 nav {
@@ -55,7 +55,7 @@ nav ul li a {
     font-size: 18px;
 }
 
-/* Restul stilurilor raman la fel */
+
 .hero {
     background-color: var(--verde-masliniu);
     padding: 60px 20px;
