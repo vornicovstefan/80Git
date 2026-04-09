@@ -23,7 +23,6 @@ header {
     display: flex;
     align-items: center;
     height: 90px;
-    
 }
 
 .logo-section {
@@ -32,7 +31,6 @@ header {
     height: 100%;
     display: flex;
     align-items: center;
-    
 }
 
 nav {
@@ -81,6 +79,7 @@ nav ul li a {
     gap: 10px;
 }
 
+
 .destinatii-titlu {
     text-align: center;
     padding: 40px 20px;
@@ -111,17 +110,30 @@ nav ul li a {
     object-fit: cover;
 }
 
+
 .card-info {
     padding: 25px;
     color: white;
     text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Asta impinge butonul in jos */
+}
+
+.card-info h3 { color: var(--fundal-crem); margin-bottom: 10px; }
+
+.card-info p { 
+    font-size: 13px; 
+    margin-bottom: auto; 
+    padding-bottom: 15px;
 }
 
 .pret {
     font-size: 24px;
     font-weight: bold;
     color: #ffcc00;
-    margin: 10px 0;
+    margin-bottom: 15px;
 }
 
 .btn-rezerva {
@@ -134,21 +146,23 @@ nav ul li a {
     font-weight: bold;
 }
 
+
 .footer-contact-banner {
-    background: linear-gradient(to bottom, var(--fundal-crem), #bdc3c7);
+    background-color: var(--fundal-crem);
     text-align: center;
-    padding: 50px 20px;
+    padding: 60px 20px;
 }
 
 .btn-contact-mare {
     background-color: var(--maro-inchis);
     color: white;
-    padding: 15px 40px;
-    border-radius: 35px;
+    padding: 15px 45px;
+    border-radius: 40px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     display: inline-block;
 }
+
 
 .footer-verde {
     background-color: var(--verde-masliniu);

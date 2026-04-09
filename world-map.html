@@ -25,25 +25,34 @@
             color: white;
             text-decoration: none;
             transition: transform 0.3s;
-            position: relative;
-            overflow: hidden;
-            border: 2px solid transparent;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Cadranul verde special solicitat */
+        .card-verde {
+            background-color: var(--verde-masliniu) !important;
         }
 
         .continent-card:hover {
             transform: translateY(-10px);
-            border-color: var(--verde-masliniu);
         }
 
         .continent-card h2 {
-            font-size: 2.5rem;
-            z-index: 2;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
         }
 
         .continent-card p {
-            z-index: 2;
             font-style: italic;
             color: var(--fundal-crem);
+        }
+        
+        .card-verde p {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: white;
         }
     </style>
 </head>
@@ -66,7 +75,7 @@
 
 <section class="hero">
     <h1>Harta Mondială a Destinațiilor</h1>
-    <p>Alege un continent pentru a vedea ofertele noastre speciale</p>
+    <p>Explorează cele mai frumoase colțuri ale lumii</p>
 </section>
 
 <div class="destinatii-titlu" style="background: var(--fundal-crem); padding: 40px 0 10px 0;">
@@ -94,6 +103,10 @@
         <h2>Oceania</h2>
         <p>Exotism și Relaxare</p>
     </a>
+    
+    <div class="continent-card card-verde">
+        <p>Alege un continent pentru a vedea cele mai bune destinații</p>
+    </div>
 </section>
 
 <footer class="footer-verde">
