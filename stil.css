@@ -52,12 +52,12 @@ nav ul li a {
     font-size: 18px;
 }
 
-/* Secțiunea Hero cu Imaginea de Fundal Modificată */
+
 .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('imagini/foto5.jpg');
     background-size: cover;
     background-position: center;
-    padding: 80px 20px;
+    padding: 60px 20px;
     text-align: center;
     color: white;
 }
@@ -84,6 +84,7 @@ nav ul li a {
     text-align: center;
     padding: 40px 20px;
 }
+
 
 .container-carduri {
     display: flex;
