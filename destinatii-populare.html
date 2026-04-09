@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>GlobeTrotter - Destinații Populare</title>
+    <link rel="stylesheet" href="stil.css">
+    <style>
+        .sectiune-dinamica { padding: 50px 20px; text-align: center; }
+        .titlu-continent { font-size: 2.5rem; color: var(--maro-inchis); margin-bottom: 10px; text-transform: capitalize; }
+        .hotel-nume { font-style: italic; font-size: 0.9rem; color: #ffcc00; margin-bottom: 10px; display: block; font-weight: bold; }
+        .card-info h3 { margin-bottom: 5px; }
+        .pret small { font-size: 0.6em; color: white; display: block; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-section">
+        <img src="imagini/foto0.png" alt="Logo GlobeTrotter" class="logo-img">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="Home.html">Acasă</a></li>
+            <li><a href="world-map.html">Destinații</a></li>
+            <li><a href="moldova.html">Moldova</a></li>
+            <li><a href="contacte.html">Contacte</a></li>
+            <li><a href="despre.html">Despre Noi</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1 id="nume-continent">Destinații Populare</h1>
+    <p>Cele mai bune oferte pentru vacanța ta de 7 zile</p>
+</section>
+
+<section class="sectiune-dinamica">
+    <h2 class="titlu-continent" id="titlu-pagina">Informații Continent</h2>
+    <p id="descriere-continent">Explorează selecția noastră de top pentru amintiri de neuitat.</p>
+</section>
+
+<section class="container-carduri" id="container-destinatii">
+    </section>
+
+<footer class="footer-verde">
+    <div><p><strong>Destinații:</strong></p><br><p>Harta Mondială</p><p>Excursii Populare</p></div>
+    <div><p><strong>Excursii:</strong></p><br><p>Moldova</p><p>Internaționale</p></div>
+    <div class="footer-contact-info"><p><strong>Contacte:</strong></p><br><p>Email: contact@globetrotter.md</p><p>Tel: +373 22 123 456</p></div>
+    <div class="footer-about"><p><strong>Despre noi:</strong></p><br><p>Suntem o agenție de turism cu o experiență de peste 10 ani.</p></div>
+</footer>
+
+<script>
+    const dateDestinatii = {
+        'europa': [
+            { oras: 'Roma, Italia', hotel: 'Hotel Quirinale', info: 'Istorie vie la fiecare pas în orașul etern.', pret: '450 €', img: 'imagini/foto13.jpg' },
+            { oras: 'Barcelona, Spania', hotel: 'W Barcelona', info: 'Mix perfect între plajă și arhitectură modernistă.', pret: '520 €', img: 'imagini/foto14.jpg' },
+            { oras: 'Paris, Franța', hotel: 'Le Meurice', info: 'Orașul luminilor te așteaptă cu delicii culinare.', pret: '780 €', img: 'imagini/foto15.jpg' }
+        ],
+        'asia': [
+            { oras: 'Tokyo, Japonia', hotel: 'Park Hyatt Tokyo', info: 'O experiență futuristă între zgârie-nori și temple.', pret: '1250 €', img: 'imagini/foto16.jpg' },
+            { oras: 'Bali, Indonezia', hotel: 'Ayana Resort', info: 'Paradis tropical cu plaje albe și jungle verzi.', pret: '980 €', img: 'imagini/foto17.jpg' },
+            { oras: 'Seul, Coreea de Sud', hotel: 'The Shilla', info: 'Descoperă palatele regale și tehnologia de vârf.', pret: '1100 €', img: 'imagini/foto18.jpg' }
+        ],
+        'africa': [
+            { oras: 'Chefchaouen, Maroc', hotel: 'Riad Albatros', info: 'Explorează farmecul orașului albastru marocan.', pret: '680 €', img: 'imagini/foto19.jpg' },
+            { oras: 'Cape Town, Africa de Sud', hotel: 'The Silo', info: 'Peisaje dramatice la întâlnirea a două oceane.', pret: '1150 €', img: 'imagini/foto20.jpg' },
+            { oras: 'Cairo, Egipt', hotel: 'Marriott Mena House', info: 'Misterul piramidelor chiar la fereastra ta.', pret: '550 €', img: 'imagini/foto21.jpg' }
+        ],
+        'america-nord': [
+            { oras: 'New York, SUA', hotel: 'The Plaza', info: 'Energia metropolei care nu doarme niciodată.', pret: '1400 €', img: 'imagini/foto22.jpg' },
+            { oras: 'Cancun, Mexic', hotel: 'Hard Rock Hotel', info: 'Relaxare totală pe malul Mării Caraibelor.', pret: '850 €', img: 'imagini/foto23.jpg' },
+            { oras: 'Toronto, Canada', hotel: 'Fairmont Royal York', info: 'Diversitate culturală și peisaje urbane uimitoare.', pret: '920 €', img: 'imagini/foto24.jpg' }
+        ],
+        'america-sud': [
+            { oras: 'Rio de Janeiro, Brazilia', hotel: 'Copacabana Palace', info: 'Samba, soare și faimoasa statuie Isus Izbăvitorul.', pret: '950 €', img: 'imagini/foto25.jpg' },
+            { oras: 'Cusco, Peru', hotel: 'Belmond Hotel Monasterio', info: 'Punctul de plecare spre legendarul Machu Picchu.', pret: '880 €', img: 'imagini/foto26.jpg' },
+            { oras: 'Buenos Aires, Argentina', hotel: 'Alvear Palace', info: 'Eleganță europeană în inima Americii Latine.', pret: '790 €', img: 'imagini/foto27.jpg' }
+        ],
+        'oceania': [
+            { oras: 'Sydney, Australia', hotel: 'Four Seasons Sydney', info: 'Vedere spre Operă și surfing pe Bondi Beach.', pret: '1550 €', img: 'imagini/foto28.jpg' },
+            { oras: 'Bora Bora, Polinezia', hotel: 'St. Regis Resort', info: 'Bungalouri pe apă în cel mai frumos atol.', pret: '2100 €', img: 'imagini/foto29.jpg' },
+            { oras: 'Auckland, Noua Zeelandă', hotel: 'SkyCity Grand', info: 'Aventură pură în tărâmul hobbiților.', pret: '1350 €', img: 'imagini/foto30.jpg' }
+        ]
+    };
+
+    function incarcaDestinatii() {
+        const params = new URLSearchParams(window.location.search);
+        let continent = params.get('continent') || 'europa';
+        let numeAfisat = continent.replace('-', ' ');
+        
+        document.getElementById('nume-continent').innerText = "Destinații în " + numeAfisat;
+        document.getElementById('titlu-pagina').innerText = numeAfisat;
+
+        const container = document.getElementById('container-destinatii');
+        const destinatii = dateDestinatii[continent] || [];
+
+        if (destinatii.length === 0) {
+            container.innerHTML = "<p style='color:white; width: 100%;'>Momentan nu avem oferte listate.</p>";
+            return;
+        }
+
+        container.innerHTML = "";
+        destinatii.forEach(d => {
+            container.innerHTML += `
+                <div class="card">
+                    <img src="${d.img}" alt="${d.oras}">
+                    <div class="card-info">
+                        <h3>${d.oras}</h3>
+                        <span class="hotel-nume">${d.hotel}</span>
+                        <p>${d.info}</p>
+                        <div class="pret">${d.pret} <small>Pachet 7 zile / persoană</small></div>
+                        <a href="contacte.html" class="btn-rezerva">Rezervă acum</a>
+                    </div>
+                </div>
+            `;
+        });
+    }
+    window.onload = incarcaDestinatii;
+</script>
+
+<div class="copyright">© 2026 GlobeTrotter. Toate drepturile rezervate.</div>
+</body>
+</html>
