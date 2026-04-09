@@ -5,7 +5,6 @@
     <title>GlobeTrotter - Destinații Mondiale</title>
     <link rel="stylesheet" href="stil.css">
     <style>
-        
         .grid-continente {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -49,7 +48,7 @@
         .continent-card p { font-style: italic; color: var(--fundal-crem); }
 
         .card-verde {
-            background-color: var(--verde-masliniu) !important;
+            background-color: var(--verde-masliniu);
             background-image: none !important;
             grid-column: 1 / -1; 
             max-width: 600px;
@@ -60,17 +59,15 @@
 
         .card-verde::before { display: none; }
         .card-verde p { font-style: normal; font-weight: bold; font-size: 1.2rem; color: white; }
-        .card-verde:hover { transform: none !important; }
+        .card-verde:hover { transform: none ; }
         .continent-card:not(.card-verde):hover { transform: translateY(-10px); }
 
-        
         #card-europa { background-image: url('imagini/foto7.jpg'); }
         #card-asia { background-image: url('imagini/foto8.jpg'); }
         #card-africa { background-image: url('imagini/foto9.jpg'); }
         #card-america-nord { background-image: url('imagini/foto10.jpg'); }
         #card-oceania { background-image: url('imagini/foto11.jpg'); }
         #card-america-sud { background-image: url('imagini/foto12.jpg'); }
-
     </style>
 </head>
 <body>
@@ -90,7 +87,7 @@
     </nav>
 </header>
 
-<section class="hero">
+<section class="hero hero-destinatii">
     <h1>Harta Mondială a Destinațiilor</h1>
     <p>Explorează cele mai frumoase colțuri ale lumii</p>
 </section>
@@ -134,7 +131,7 @@
     <div><p><strong>Destinații:</strong></p><br><p>Harta Mondială</p><p>Excursii Populare</p></div>
     <div><p><strong>Excursii:</strong></p><br><p>Moldova</p><p>Internaționale</p></div>
     <div class="footer-contact-info"><p><strong>Contacte:</strong></p><br><p>Email: contact@globetrotter.md</p><p>Tel: +373 22 123 456</p></div>
-    <div class="footer-about"><p><strong>Despre noi:</strong></p><br><p>Suntem o agenție de turism dedicată viselor tale.</p></div>
+    <div class="footer-about"><p><strong>Despre noi:</strong></p><br><p>Suntem o agenție dedicată viselor tale.</p></div>
 </footer>
 
 <div class="copyright">© 2026 GlobeTrotter. Toate drepturile rezervate.</div>

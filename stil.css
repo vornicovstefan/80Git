@@ -21,7 +21,7 @@ header {
     background: white;
     display: flex;
     align-items: center;
-    height: 100px; /* Am mărit puțin header-ul pentru logo-ul mai mare */
+    height: 100px;
 }
 
 .logo-section {
@@ -32,9 +32,8 @@ header {
     align-items: center;
 }
 
-/* Stil pentru logo-ul mai mare */
 .logo-img {
-    height: 80px; /* Poți mări această valoare dacă vrei și mai mare */
+    height: 80px;
     width: auto;
 }
 
@@ -58,12 +57,45 @@ nav ul li a {
     font-size: 18px;
 }
 
+
 .hero {
-    background-color: var(--verde-masliniu);
-    padding: 60px 20px;
+    position: relative; 
+    padding: 100px 20px;
     text-align: center;
     color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
+
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45); 
+    z-index: 1;
+}
+
+/* Aduce textul deasupra măștii */
+.hero h1, .hero p, .hero .features {
+    position: relative;
+    z-index: 2;
+}
+
+
+.hero-acasa {
+    background-image: url('imagini/foto6.jpg');
+}
+
+.hero-destinatii {
+    background-image: url('imagini/foto7.jpg');
+}
+
 
 .features {
     display: flex;
