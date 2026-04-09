@@ -21,15 +21,21 @@ header {
     background: white;
     display: flex;
     align-items: center;
-    height: 90px;
+    height: 100px; /* Am mărit puțin header-ul pentru logo-ul mai mare */
 }
 
 .logo-section {
-    width: 250px;
+    width: auto;
     padding-left: 30px;
     height: 100%;
     display: flex;
     align-items: center;
+}
+
+/* Stil pentru logo-ul mai mare */
+.logo-img {
+    height: 80px; /* Poți mări această valoare dacă vrei și mai mare */
+    width: auto;
 }
 
 nav {
@@ -52,11 +58,8 @@ nav ul li a {
     font-size: 18px;
 }
 
-
 .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('imagini/foto5.jpg');
-    background-size: cover;
-    background-position: center;
+    background-color: var(--verde-masliniu);
     padding: 60px 20px;
     text-align: center;
     color: white;
@@ -84,7 +87,6 @@ nav ul li a {
     text-align: center;
     padding: 40px 20px;
 }
-
 
 .container-carduri {
     display: flex;

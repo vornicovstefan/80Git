@@ -5,13 +5,7 @@
     <title>GlobeTrotter - Destinații Mondiale</title>
     <link rel="stylesheet" href="stil.css">
     <style>
-        /* Fundal specific cu foto6 pentru această pagină */
-        .hero {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('imagini/foto6.jpg') !important;
-            background-size: cover;
-            background-position: center;
-        }
-
+        /* Stiluri specifice pentru grila de continente */
         .grid-continente {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -21,7 +15,6 @@
         }
 
         .continent-card {
-            background-color: var(--maro-inchis);
             height: 250px;
             border-radius: 30px;
             display: flex;
@@ -33,39 +26,83 @@
             transition: transform 0.3s;
             text-align: center;
             padding: 20px;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            position: relative;
         }
 
-        .card-verde {
-            background-color: var(--verde-masliniu) !important;
+        /* Mască întunecată pentru a face textul lizibil peste poze */
+        .continent-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 1;
         }
 
-        .continent-card:hover {
-            transform: translateY(-10px);
+        .continent-card h2, .continent-card p {
+            position: relative;
+            z-index: 2;
         }
 
         .continent-card h2 {
             font-size: 2.2rem;
             margin-bottom: 5px;
+            font-weight: bold;
         }
 
         .continent-card p {
             font-style: italic;
             color: var(--fundal-crem);
         }
-        
+
+        /* --- STILIZARE SPECIALĂ CADRAN VERDE --- */
+        .card-verde {
+            background-color: var(--verde-masliniu) !important;
+            background-image: none !important;
+            /* Îl forțăm să stea pe rând nou și să fie centrat */
+            grid-column: 1 / -1; 
+            max-width: 600px;
+            margin: 0 auto;
+            width: 100%;
+            cursor: default; /* Arată că nu e clickabil */
+        }
+
+        .card-verde::before { display: none; } /* Scoatem masca neagră */
+
         .card-verde p {
             font-style: normal;
             font-weight: bold;
             font-size: 1.2rem;
             color: white;
         }
+
+        /* Scoatem animația doar pentru cadranul verde */
+        .card-verde:hover {
+            transform: none !important;
+        }
+
+        /* Animația de ridicare doar pentru cadranele cu continente */
+        .continent-card:not(.card-verde):hover {
+            transform: translateY(-10px);
+        }
+
+        /* --- IMAGINI FUNDAL CONTINENTE --- */
+        #card-europa { background-image: url('imagini/foto7.jpg'); }
+        #card-asia { background-image: url('imagini/foto8.jpg'); }
+        #card-africa { background-image: url('imagini/foto9.jpg'); }
+        #card-america-nord { background-image: url('imagini/foto10.jpg'); }
+        #card-oceania { background-image: url('imagini/foto11.jpg'); }
+        #card-america-sud { background-image: url('imagini/foto12.jpg'); }
+
     </style>
 </head>
 <body>
 
 <header>
     <div class="logo-section">
-        <img src="imagini/foto0.png" alt="Logo GlobeTrotter" style="height: 50px;">
+        <img src="imagini/foto0.png" alt="Logo GlobeTrotter" class="logo-img">
     </div>
     <nav>
         <ul>
@@ -88,23 +125,27 @@
 </div>
 
 <section class="grid-continente">
-    <a href="#" class="continent-card">
+    <a href="#" class="continent-card" id="card-europa">
         <h2>Europa</h2>
         <p>Istorie și Cultură</p>
     </a>
-    <a href="#" class="continent-card">
+    <a href="#" class="continent-card" id="card-asia">
         <h2>Asia</h2>
         <p>Tradiție și Viitor</p>
     </a>
-    <a href="#" class="continent-card">
+    <a href="#" class="continent-card" id="card-africa">
         <h2>Africa</h2>
         <p>Aventură în Savană</p>
     </a>
-    <a href="#" class="continent-card">
-        <h2>America</h2>
-        <p>Peisaje de Vis</p>
+    <a href="#" class="continent-card" id="card-america-nord">
+        <h2>America de Nord</h2>
+        <p>Metropole și Natură</p>
     </a>
-    <a href="#" class="continent-card">
+    <a href="#" class="continent-card" id="card-america-sud">
+        <h2>America de Sud</h2>
+        <p>Junglă și Carnaval</p>
+    </a>
+    <a href="#" class="continent-card" id="card-oceania">
         <h2>Oceania</h2>
         <p>Exotism și Relaxare</p>
     </a>
@@ -115,13 +156,33 @@
 </section>
 
 <footer class="footer-verde">
-    <div><p><strong>Destinații:</strong></p><br><p>Harta Mondială</p><p>Excursii Populare</p></div>
-    <div><p><strong>Excursii:</strong></p><br><p>Moldova</p><p>Internaționale</p></div>
-    <div class="footer-contact-info"><p><strong>Contacte:</strong></p><br><p>Email: contact@globetrotter.md</p><p>Tel: +373 22 123 456</p><p>Chișinău, Moldova</p></div>
-    <div class="footer-about"><p><strong>Despre noi:</strong></p><br><p>Suntem o agenție de turism cu o experiență de peste 10 ani.</p></div>
+    <div>
+        <p><strong>Destinații:</strong></p><br>
+        <p>Harta Mondială</p>
+        <p>Excursii Populare</p>
+    </div>
+
+    <div>
+        <p><strong>Excursii:</strong></p><br>
+        <p>Moldova</p>
+        <p>Internaționale</p>
+    </div>
+
+    <div class="footer-contact-info">
+        <p><strong>Contacte:</strong></p><br>
+        <p>Email: contact@globetrotter.md</p>
+        <p>Tel: +373 22 123 456</p>
+    </div>
+
+    <div class="footer-about">
+        <p><strong>Despre noi:</strong></p><br>
+        <p>Suntem o agenție de turism cu o experiență de peste 10 ani în transformarea viselor în realitate.</p>
+    </div>
 </footer>
 
-<div class="copyright">© 2026 GlobeTrotter. Toate drepturile rezervate.</div>
+<div class="copyright">
+    © 2026 GlobeTrotter. Toate drepturile rezervate.
+</div>
 
 </body>
 </html>
