@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>GlobeTrotter - Rezervare</title>
+    <link rel="stylesheet" href="stil.css">
+    <style>
+        .sectiune-formular {
+            padding: 50px 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .form-container {
+            background-color: var(--maro-inchis);
+            padding: 40px;
+            border-radius: 30px;
+            width: 100%;
+            max-width: 500px;
+            color: white;
+        }
+        .form-container h2 {
+            margin-bottom: 25px;
+            color: var(--fundal-crem);
+            text-align: center;
+        }
+        .grup-input {
+            margin-bottom: 20px;
+        }
+        .grup-input label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        .grup-input input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: none;
+            font-size: 16px;
+        }
+        .btn-trimite-rezervare {
+            width: 100%;
+            background-color: var(--verde-masliniu);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-section">
+        <img src="imagini/foto0.png" alt="Logo GlobeTrotter" class="logo-img">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="Home.html">Acasă</a></li>
+            <li><a href="world-map.html">Destinații</a></li>
+            <li><a href="moldova.html">Moldova</a></li>
+            <li><a href="contacte.html">Contacte</a></li>
+            <li><a href="despre.html">Despre Noi</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="sectiune-formular">
+    <div class="form-container">
+        <h2>Rezervă Acum</h2>
+        <form id="formularRezervare">
+            <div class="grup-input">
+                <label for="numeComplet">Nume și Prenume</label>
+                <input type="text" id="numeComplet" placeholder="Numele tău..." required>
+            </div>
+            
+            <div class="grup-input">
+                <label for="emailUtilizator">Gmail</label>
+                <input type="email" id="emailUtilizator" placeholder="exemplu@gmail.com" required>
+            </div>
+            
+            <div class="grup-input">
+                <label for="nrTelefon">Număr de Telefon</label>
+                <input type="tel" id="nrTelefon" placeholder="Ex: +373..." required>
+            </div>
+
+            <button type="submit" class="btn-trimite-rezervare">Confirmă Rezervarea</button>
+        </form>
+    </div>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
