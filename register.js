@@ -39,7 +39,7 @@ document.getElementById('registerForm').addEventListener('submit', function(e) {
     }
 
     
-    let utilizatori = JSON.parse(localStorage.getItem('utilizatori')) || [];
+    let utilizatori = JSON.parse(localStorage.getItem('utilizatori')) || [];l
     
     
     if (utilizatori.find(u => u.email === email)) {

@@ -51,24 +51,24 @@
 </div>
 
 <script>
-    async function incarcaDestinatii() {
-        //  preia continentul
+     function incarcaDestinatii() {
+        // alege
         const params = new URLSearchParams(window.location.search);
         const continent = params.get('continent') || 'europa';
         
-       //actualizeaza textele
+       //actualizeaza txt
         document.getElementById('nume-continent').innerText = "Destinații în " + continent;
         document.getElementById('titlu-pagina').innerText = continent;
 
        
-//citeste JSOn
-        const raspuns = await fetch('destinatii.json');
-        const date = await raspuns.json();
+    
+        const raspuns =  fetch('destinatii.json');
+        const date =  raspuns.json();
         const listaOrase = date[continent];
 
         
 
-//afiseaza
+ 
 
         const container = document.getElementById('container-destinatii');
         container.innerHTML = ""; 
