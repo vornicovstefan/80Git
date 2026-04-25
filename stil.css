@@ -61,7 +61,7 @@ nav ul li a {
 
 .btn-auth {
     background-color: var(--verde-masliniu);
-    color: white !important;
+    color: white ;
     padding: 8px 20px;
     border-radius: 20px;
     transition: opacity 0.3s;
@@ -90,7 +90,7 @@ nav ul li a {
     cursor: pointer;
     transition: all 0.3s ease;
     
-    /* Umbră vibrantă pentru efect de adâncime */
+   
     box-shadow: 0 4px 15px rgba(255, 69, 0, 0.4);
     outline: none;
 }
@@ -120,7 +120,7 @@ nav ul li a {
     text-decoration: underline;
 }
 
-/* ======================================================= */
+
 
 .hero {
     position: relative; 

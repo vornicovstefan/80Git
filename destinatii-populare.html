@@ -86,7 +86,7 @@
         ]
     };
 
-    function incarcaDestinatii() {
+   function incarcaDestinatii() {
         const params = new URLSearchParams(window.location.search);
         let continent = params.get('continent') || 'europa';
         let numeAfisat = continent.replace('-', ' ');
@@ -104,6 +104,9 @@
 
         container.innerHTML = "";
         destinatii.forEach(d => {
+            
+            const urlRezervare = `rezerva.html?oras=${encodeURIComponent(d.oras)}&pret=${encodeURIComponent(d.pret)}`;
+            
             container.innerHTML += `
                 <div class="card">
                     <img src="${d.img}" alt="${d.oras}">
@@ -112,7 +115,7 @@
                         <span class="hotel-nume">${d.hotel}</span>
                         <p>${d.info}</p>
                         <div class="pret">${d.pret} <small>Pachet 7 zile / persoană</small></div>
-                        <a href="contacte.html" class="btn-rezerva">Rezervă acum</a>
+                        <a href="${urlRezervare}" class="btn-rezerva">Rezervă acum</a>
                     </div>
                 </div>
             `;

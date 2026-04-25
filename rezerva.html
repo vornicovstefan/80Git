@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlobeTrotter - Confirmare Rezervare</title>
+    <link rel="stylesheet" href="stil.css">
+    <link rel="stylesheet" href="stil-butoane.css">
+    <style>
+        .rezerva-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .detalii-pachet {
+            background: #f9f9f2;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid var(--verde-masliniu);
+            margin-bottom: 25px;
+        }
+
+        .detalii-pachet p {
+            margin: 5px 0;
+            font-size: 1.1rem;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: var(--maro-inchis);
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-family: inherit;
+        }
+
+        h2 {
+            text-align: center;
+            color: var(--maro-inchis);
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-section">
+        <a href="Home.html">
+            <img src="imagini/foto0.png" alt="Logo GlobeTrotter" class="logo-img">
+        </a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="Home.html">Acasă</a></li>
+            <li><a href="world-map.html">Destinații</a></li>
+            <li><a href="moldova.html">Moldova</a></li>
+            <li><a href="contacte.html">Contacte</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="rezerva-container">
+    <h2>Confirmă Rezervarea</h2>
+    <p class="subtitle">Completează datele de mai jos pentru a finaliza cererea</p>
+    
+    <div class="detalii-pachet">
+        <p><strong>Destinație:</strong> <span id="destinatie-nume">Se încarcă...</span></p>
+        <p><strong>Preț pachet:</strong> <span id="destinatie-pret">-</span></p>
+    </div>
+
+    <form id="confirmareForm">
+        <div class="form-group">
+            <label for="nume">Nume complet</label>
+            <input type="text" id="nume" placeholder="Ex: Ion Popescu" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="data">Data plecării dorite</label>
+            <input type="date" id="data" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="persoane">Număr persoane</label>
+            <input type="number" id="persoane" min="1" value="1" required>
+        </div>
+        
+        <button type="submit" class="btn-nav-auth" style="width: 100%; cursor: pointer; border: none;">
+            Trimite Cererea de Rezervare
+        </button>
+    </form>
+</div>
+
+<footer class="footer-verde" style="min-height: 100px; margin-top: 50px;">
+    <div style="text-align: center; padding: 20px; color: white;">
+        © 2026 GlobeTrotter. Toate drepturile rezervate.
+    </div>
+</footer>
+
+<script src="script-rezerva.js"></script>
+
+</body>
+</html>
