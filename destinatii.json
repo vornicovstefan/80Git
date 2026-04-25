@@ -1,0 +1,44 @@
+{
+  "europa": [
+    { "oras": "Roma, Italia", "hotel": "Hotel Quirinale", "info": "Istorie vie la fiecare pas în orașul etern.", "pret": "450 €", "img": "imagini/foto13.jpg" },
+    { "oras": "Barcelona, Spania", "hotel": "W Barcelona", "info": "Mix perfect între plajă și arhitectură modernistă.", "pret": "520 €", "img": "imagini/foto14.jpg" },
+    { "oras": "Paris, Franța", "hotel": "Le Meurice", "info": "Orașul luminilor te așteaptă cu delicii culinare.", "pret": "780 €", "img": "imagini/foto15.jpg" },
+    { "oras": "Praga, Cehia", "hotel": "Grand Hotel Bohemia", "info": "Farmec boem în orașul celor o sută de turnuri.", "pret": "390 €", "img": "imagini/foto100.jpg" },
+    { "oras": "Atena, Grecia", "hotel": "Hotel Grande Bretagne", "info": "Leagănul civilizației cu peisaje mediteraneene.", "pret": "410 €", "img": "imagini/foto101.jpg" }
+  ],
+  "asia": [
+    { "oras": "Tokyo, Japonia", "hotel": "Park Hyatt Tokyo", "info": "O experiență futuristă între zgârie-nori și temple.", "pret": "1250 €", "img": "imagini/foto16.jpg" },
+    { "oras": "Bali, Indonezia", "hotel": "Ayana Resort", "info": "Paradis tropical cu plaje albe și jungle verzi.", "pret": "980 €", "img": "imagini/foto17.jpg" },
+    { "oras": "Seul, Coreea de Sud", "hotel": "The Shilla", "info": "Descoperă palatele regale și tehnologia de vârf.", "pret": "1100 €", "img": "imagini/foto18.jpg" },
+    { "oras": "Bangkok, Thailanda", "hotel": "Mandarin Oriental", "info": "Temple aurite și o viață de noapte vibrantă.", "pret": "650 €", "img": "imagini/foto102.jpg" },
+    { "oras": "Singapore", "hotel": "Marina Bay Sands", "info": "Grădini verticale și arhitectură de ultimă oră.", "pret": "1350 €", "img": "imagini/foto103.jpg" }
+  ],
+  "africa": [
+    { "oras": "Chefchaouen, Maroc", "hotel": "Riad Albatros", "info": "Explorează farmecul orașului albastru marocan.", "pret": "680 €", "img": "imagini/foto19.jpg" },
+    { "oras": "Cape Town, Africa de Sud", "hotel": "The Silo", "info": "Peisaje dramatice la întâlnirea a două oceane.", "pret": "1150 €", "img": "imagini/foto20.jpg" },
+    { "oras": "Cairo, Egipt", "hotel": "Marriott Mena House", "info": "Misterul piramidelor chiar la fereastra ta.", "pret": "550 €", "img": "imagini/foto21.jpg" },
+    { "oras": "Marrakech, Maroc", "hotel": "La Mamounia", "info": "O oază de lux în inima medinei agitate.", "pret": "720 €", "img": "imagini/foto104.jpg" },
+    { "oras": "Nairobi, Kenya", "hotel": "Giraffe Manor", "info": "Safari urban și mic dejun alături de girafe.", "pret": "1450 €", "img": "imagini/foto105.jpg" }
+  ],
+  "america-nord": [
+    { "oras": "New York, SUA", "hotel": "The Plaza", "info": "Energia metropolei care nu doarme niciodată.", "pret": "1400 €", "img": "imagini/foto22.jpg" },
+    { "oras": "Cancun, Mexic", "hotel": "Hard Rock Hotel", "info": "Relaxare totală pe malul Mării Caraibelor.", "pret": "850 €", "img": "imagini/foto23.jpg" },
+    { "oras": "Toronto, Canada", "hotel": "Fairmont Royal York", "info": "Diversitate culturală și peisaje urbane uimitoare.", "pret": "920 €", "img": "imagini/foto24.jpg" },
+    { "oras": "Los Angeles, SUA", "hotel": "Beverly Hills Hotel", "info": "Strălucirea Hollywood-ului și plaje celebre.", "pret": "1300 €", "img": "imagini/foto106.jpg" },
+    { "oras": "Miami, SUA", "hotel": "Fontainebleau", "info": "Stil Art Deco și viață de noapte incendiară.", "pret": "980 €", "img": "imagini/foto107.jpg" }
+  ],
+  "america-sud": [
+    { "oras": "Rio de Janeiro, Brazilia", "hotel": "Copacabana Palace", "info": "Samba, soare și faimoasa statuie Isus Izbăvitorul.", "pret": "950 €", "img": "imagini/foto25.jpg" },
+    { "oras": "Cusco, Peru", "hotel": "Belmond Hotel Monasterio", "info": "Punctul de plecare spre legendarul Machu Picchu.", "pret": "880 €", "img": "imagini/foto26.jpg" },
+    { "oras": "Buenos Aires, Argentina", "hotel": "Alvear Palace", "info": "Eleganță europeană în inima Americii Latine.", "pret": "790 €", "img": "imagini/foto27.jpg" },
+    { "oras": "Santiago, Chile", "hotel": "The Ritz-Carlton", "info": "Vederi spectaculoase spre munții Anzi.", "pret": "820 €", "img": "imagini/foto108.jpg" },
+    { "oras": "Cartagena, Columbia", "hotel": "Sofitel Legend", "info": "Istorie colonială colorată pe malul mării.", "pret": "750 €", "img": "imagini/foto109.jpg" }
+  ],
+  "oceania": [
+    { "oras": "Sydney, Australia", "hotel": "Four Seasons Sydney", "info": "Vedere spre Operă și surfing pe Bondi Beach.", "pret": "1550 €", "img": "imagini/foto28.jpg" },
+    { "oras": "Bora Bora, Polinezia", "hotel": "St. Regis Resort", "info": "Bungalouri pe apă în cel mai frumos atol.", "pret": "2100 €", "img": "imagini/foto29.jpg" },
+    { "oras": "Auckland, Noua Zeelandă", "hotel": "SkyCity Grand", "info": "Aventură pură în tărâmul hobbiților.", "pret": "1350 €", "img": "imagini/foto30.jpg" },
+    { "oras": "Melbourne, Australia", "hotel": "The Langham", "info": "Capitala culturală și culinară a Australiei.", "pret": "1200 €", "img": "imagini/foto110.jpg" },
+    { "oras": "Fiji, Suva","hotel": "InterContinental Fiji", "info": "O evadare exotică pe insule cu ape de cristal.", "pret": "1800 €", "img": "imagini/foto111.jpg" }
+  ]
+}

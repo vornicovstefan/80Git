@@ -39,6 +39,7 @@
         .continent-card h2, .continent-card p { position: relative; z-index: 2; }
         .continent-card h2 { font-size: 2.2rem; margin-bottom: 5px; font-weight: bold; }
         .continent-card p  { font-style: italic; color: var(--fundal-crem); }
+        
         .card-verde {
             background-color: var(--verde-masliniu);
             background-image: none;
@@ -50,132 +51,24 @@
         }
         .card-verde::before { display: none; }
         .card-verde p { font-style: normal; font-weight: bold; font-size: 1.2rem; color: white; }
+        
+        
         .card-verde:hover { transform: none; }
-        .continent-card:not(.card-verde):hover { transform: translateY(-10px); }
-        #card-europa      { background-image: url('imagini/foto6.jpg'); }
-        #card-asia        { background-image: url('imagini/foto8.jpg'); }
-        #card-africa      { background-image: url('imagini/foto9.jpg'); }
-        #card-america-nord{ background-image: url('imagini/foto10.jpg'); }
-        #card-oceania     { background-image: url('imagini/foto11.jpg'); }
-        #card-america-sud { background-image: url('imagini/foto12.jpg'); }
+        .continent-card:not(.card-verde):hover { 
+            transform: translateY(-10px); 
+        }
+
+        #card-europa       { background-image: url('imagini/foto6.jpg'); }
+        #card-asia         { background-image: url('imagini/foto8.jpg'); }
+        #card-africa       { background-image: url('imagini/foto9.jpg'); }
+        #card-america-nord { background-image: url('imagini/foto10.jpg'); }
+        #card-oceania      { background-image: url('imagini/foto11.jpg'); }
+        #card-america-sud  { background-image: url('imagini/foto12.jpg'); }
 
         
-        .sectiune-cautare {
-            background-color: var(--fundal-crem);
-            padding: 25px 10% 15px 10%;
-            display: flex;
-            justify-content: center;
-        }
-        .search-wrapper {
-            display: flex;
-            align-items: center;
-            width: 100%;
-            max-width: 620px;
-            background-color: white;
-            border-radius: 50px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.12);
-            overflow: hidden;
-            border: 2px solid transparent;
-            transition: border-color 0.3s;
-        }
-        .search-wrapper:focus-within { border-color: var(--verde-masliniu); }
-        .search-icon { padding: 0 18px; font-size: 1.2rem; color: var(--maro-inchis); }
-        #search-input {
-            flex: 1;
-            border: none;
-            outline: none;
-            font-size: 1rem;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            padding: 16px 0;
-            color: var(--maro-inchis);
-            background: transparent;
-        }
-        #search-input::placeholder { color: #aaa; }
-        #btn-cauta {
-            background-color: var(--verde-masliniu);
-            color: white;
-            border: none;
-            padding: 16px 28px;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            transition: background-color 0.2s;
-        }
-        #btn-cauta:hover { background-color: #4a5a28; }
-
-        
-        #rezultate-search {
+        .footer-invizibil {
             display: none;
-            background-color: var(--fundal-crem);
-            padding: 20px 10% 50px 10%;
         }
-        #rezultate-search h3 {
-            text-align: center;
-            color: var(--maro-inchis);
-            font-size: 1.4rem;
-            margin-bottom: 25px;
-        }
-        .rezultate-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 25px;
-            justify-content: center;
-        }
-        .card-rezultat {
-            background-color: var(--maro-inchis);
-            border-radius: 30px;
-            width: 260px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            display: flex;
-            flex-direction: column;
-            animation: fadeIn 0.3s ease;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to   { opacity: 1; transform: translateY(0); }
-        }
-        .card-rezultat-info {
-            padding: 20px;
-            color: white;
-            text-align: center;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .card-rezultat-info h4 { color: var(--fundal-crem); font-size: 1.1rem; margin-bottom: 6px; }
-        .continent-tag { font-size: 0.75rem; color: #ffcc00; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
-        .card-rezultat-info p { font-size: 0.85rem; color: rgba(255,255,255,0.8); margin-bottom: 12px; }
-        .pret-mic { font-size: 1.1rem; font-weight: bold; color: #ffcc00; margin-bottom: 12px; }
-        .pret-mic small { font-size: 0.65em; color: rgba(255,255,255,0.6); }
-        .card-rezultat-info .btn-rezerva {
-            display: inline-block;
-            background-color: var(--verde-masliniu);
-            color: white;
-            text-decoration: none;
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-weight: bold;
-            font-size: 0.9rem;
-        }
-        .mesaj-fara-rezultate { text-align: center; color: var(--maro-inchis); font-size: 1.1rem; padding: 20px; width: 100%; }
-        #btn-inchide-cautare {
-            display: block;
-            margin: 0 auto 20px auto;
-            background: none;
-            border: 2px solid var(--maro-inchis);
-            color: var(--maro-inchis);
-            padding: 8px 25px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            font-weight: bold;
-            transition: background-color 0.2s, color 0.2s;
-        }
-        #btn-inchide-cautare:hover { background-color: var(--maro-inchis); color: white; }
     </style>
 </head>
 <body>
@@ -189,7 +82,7 @@
             <li><a href="Home.html">Acasa</a></li>
             <li><a href="world-map.html">Destinatii</a></li>
             <li><a href="moldova.html">Moldova</a></li>
-            <li><a href="contacte.html">Contacter</a></li>
+            <li><a href="contacte.html">Contacte</a></li>
             <li><a href="despre.html">Despre Noi</a></li>
         </ul>
     </nav>
@@ -204,23 +97,6 @@
     <h2>Exploreaza Continentele</h2>
 </div>
 
-
-<div class="sectiune-cautare">
-    <div class="search-wrapper">
-        <span class="search-icon"></span>
-        <input type="text" id="search-input" placeholder="Cauta o destinatie... ex: Tokyo, Roma, Bali" autocomplete="off">
-        <button id="btn-cauta" onclick="cautaDestinatie()">Cauta</button>
-    </div>
-</div>
-
-<!-- REZULTATE -->
-<div id="rezultate-search">
-    <button id="btn-inchide-cautare" onclick="inchideCautare()"> Inchide cautarea</button>
-    <h3 id="titlu-rezultate">Rezultate</h3>
-    <div class="rezultate-grid" id="grid-rezultate"></div>
-</div>
-
-<!-- CONTINENTE -->
 <section class="grid-continente" id="sectiune-continente">
     <a href="destinatii-populare.html?continent=europa" class="continent-card" id="card-europa">
         <h2>Europa</h2><p>Istorie si Cultura</p>
@@ -245,17 +121,12 @@
     </div>
 </section>
 
-<footer class="footer-verde">
-    <div><p><strong>Destinatii:</strong></p><br><p>Harta Mondiala</p><p>Excursii Populare</p></div>
-    <div><p><strong>Excursii:</strong></p><br><p>Moldova</p><p>Internationale</p></div>
-    <div class="footer-contact-info"><p><strong>Contacte:</strong></p><br><p>Email: contact@globetrotter.md</p><p>Tel: +373 22 123 456</p></div>
-    <div class="footer-about"><p><strong>Despre noi:</strong></p><br><p>Suntem o agentie dedicata viselor tale.</p></div>
+<footer class="footer-verde footer-invizibil">
 </footer>
 
-<div class="copyright">&#169; 2026 GlobeTrotter. Toate drepturile rezervate.</div>
-
-<!-- Fisierul JS cu logica de cautare -->
-<script src="cautare.js"></script>
+<div class="copyright" style="background-color: var(--maro-inchis); color: white; padding: 20px 0;">
+    &#169; 2026 GlobeTrotter. Toate drepturile rezervate.
+</div>
 
 </body>
 </html>
