@@ -47,6 +47,7 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
+    align-items: center; 
     gap: 30px;
 }
 
@@ -57,6 +58,69 @@ nav ul li a {
     font-size: 18px;
 }
 
+
+.btn-auth {
+    background-color: var(--verde-masliniu);
+    color: white !important;
+    padding: 8px 20px;
+    border-radius: 20px;
+    transition: opacity 0.3s;
+}
+
+.btn-auth:hover {
+    opacity: 0.85;
+}
+
+
+.btn-auth-submit {
+    width: 100%;
+    padding: 15px;
+    margin-top: 25px;
+    border: none;
+    border-radius: 12px; 
+    
+    
+    background: linear-gradient(to right, #ff8c00, #ff4500);
+    color: #ffffff;
+    
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    /* Umbră vibrantă pentru efect de adâncime */
+    box-shadow: 0 4px 15px rgba(255, 69, 0, 0.4);
+    outline: none;
+}
+
+.btn-auth-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 69, 0, 0.6);
+    filter: brightness(1.1);
+}
+
+.btn-auth-submit:active {
+    transform: translateY(0);
+}
+
+.link-auth-footer {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: var(--maro-inchis);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.link-auth-footer:hover {
+    color: var(--verde-masliniu);
+    text-decoration: underline;
+}
+
+/* ======================================================= */
 
 .hero {
     position: relative; 
@@ -69,7 +133,6 @@ nav ul li a {
     overflow: hidden;
 }
 
-
 .hero::before {
     content: "";
     position: absolute;
@@ -81,21 +144,13 @@ nav ul li a {
     z-index: 1;
 }
 
-/* Aduce textul deasupra măștii */
 .hero h1, .hero p, .hero .features {
     position: relative;
     z-index: 2;
 }
 
-
-.hero-acasa {
-    background-image: url('imagini/foto6.jpg');
-}
-
-.hero-destinatii {
-    background-image: url('imagini/foto7.jpg');
-}
-
+.hero-acasa { background-image: url('imagini/foto6.jpg'); }
+.hero-destinatii { background-image: url('imagini/foto7.jpg'); }
 
 .features {
     display: flex;

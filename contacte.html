@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>GlobeTrotter - Contacte</title>
+    <link rel="stylesheet" href="stil.css">
+    <link rel="stylesheet" href="stil-butoane.css">
+    <style>
+        .hero-contact {
+            background-color: var(--maro-inchis);
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .container-contact {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 60px 10%;
+        }
+
+        .info-contact h2 {
+            color: var(--maro-inchis);
+            margin-bottom: 20px;
+        }
+
+        .info-item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .info-item strong {
+            color: var(--verde-masliniu);
+        }
+
+        .contact-form {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-family: inherit;
+        }
+
+        .contact-form textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        .footer-verde {
+            min-height: 40px;
+            padding: 0;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-section">
+        <a href="Home.html">
+            <img src="imagini/foto0.png" alt="Logo GlobeTrotter" class="logo-img">
+        </a>
+    </div>
+    <nav>
+        <ul id="nav-menu">
+            <li><a href="Home.html">Acasă</a></li>
+            <li><a href="world-map.html">Destinații</a></li>
+            <li><a href="moldova.html">Moldova</a></li>
+            <li><a href="contacte.html">Contacte</a></li>
+            <li><a href="despre.html">Despre Noi</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero-contact">
+    <div>
+        <h1 style="font-size: 3rem;">Contactează-ne</h1>
+        <p>Suntem aici să îți planificăm următoarea aventură</p>
+    </div>
+</section>
+
+<section class="container-contact">
+    <div class="info-contact">
+        <h2>Informații de Contact</h2>
+        <p>Ne poți vizita la sediul nostru central sau ne poți scrie direct pe email.</p>
+        <br>
+        <div class="info-item">
+            <div><strong>Adresă:</strong><br>Strada Studenților 9/1, Chișinău, Republica Moldova</div>
+        </div>
+        <div class="info-item">
+            <div><strong>Telefon:</strong><br>+373 22 123 456</div>
+        </div>
+        <div class="info-item">
+            <div><strong>Email:</strong><br>contact@globetrotter.md</div>
+        </div>
+        <div class="info-item">
+            <div><strong>Program:</strong><br>Luni - Vineri: 09:00 - 18:00</div>
+        </div>
+    </div>
+
+    <div class="contact-form">
+        <form id="form-mesaj">
+            <input type="text" placeholder="Numele tău" required>
+            <input type="email" placeholder="Adresa de email" required>
+            <input type="text" placeholder="Subiect">
+            <textarea placeholder="Mesajul tău..."></textarea>
+            
+            <button type="submit" class="btn-nav-auth" style="width: 100%;">Trimite Mesajul</button>
+        </form>
+    </div>
+</section>
+
+<footer class="footer-verde"></footer>
+
+<div class="copyright">© 2026 GlobeTrotter. Toate drepturile rezervate.</div>
+
+<script>
+    document.getElementById('form-mesaj').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Mesajul tău a fost trimis cu succes! Te vom contacta în cel mai scurt timp.');
+        this.reset();
+    });
+</script>
+
+</body>
+</html>

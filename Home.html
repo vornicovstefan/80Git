@@ -4,34 +4,24 @@
     <meta charset="UTF-8">
     <title>GlobeTrotter - Acasă</title>
     <link rel="stylesheet" href="stil.css">
-    <style>
-       
-        .sectiune-dinamica-recenzii {
-            padding: 50px 10%;
-            background-color: #f9f9f2;
-            text-align: center;
-        }
-        #container-recenzii {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
-        }
-    </style>
 </head>
 <body>
 
 <header>
     <div class="logo-section">
-        <img src="imagini/foto0.png" alt="Logo GlobeTrotter" class="logo-img">
+        <a href="Home.html">
+            <img src="imagini/foto0.png" alt="Logo GlobeTrotter" class="logo-img">
+        </a>
     </div>
     <nav>
         <ul>
             <li><a href="Home.html">Acasă</a></li>
             <li><a href="world-map.html">Destinații</a></li>
             <li><a href="moldova.html">Moldova</a></li>
-            <li><a href="rezerva.html">Rezervare</a></li>
+            <li><a href="contacte.html">Contacte</a></li>
             <li><a href="despre.html">Despre Noi</a></li>
+            <li><a href="login.html" class="btn-nav-auth">Login</a></li>
+            <li><a href="register.html" class="btn-nav-auth">Register</a></li>
         </ul>
     </nav>
 </header>
@@ -90,12 +80,6 @@
     </div>
 </section>
 
-<section class="sectiune-dinamica-recenzii">
-    <h2 style="color: var(--maro-inchis);">Ce spun călătorii noștri</h2>
-    <div id="container-recenzii">
-        </div>
-</section>
-
 <footer class="footer-verde">
     <div><p><strong>Destinații:</strong></p><br><p>Harta Mondială</p><p>Excursii Populare</p></div>
     <div><p><strong>Excursii:</strong></p><br><p>Moldova</p><p>Internaționale</p></div>
@@ -104,8 +88,6 @@
 </footer>
 
 <div class="copyright">© 2026 GlobeTrotter. Toate drepturile rezervate.</div>
-
-<script src="script-home.js"></script>
 
 </body>
 </html>

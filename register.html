@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>GlobeTrotter - Înregistrare</title>
+    <link rel="stylesheet" href="stil.css">
+    <link rel="stylesheet" href="stil-butoane.css">
+    <style>
+        .auth-container {
+            max-width: 500px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .auth-container h2 { color: var(--maro-inchis); text-align: center; margin-bottom: 20px; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; color: var(--maro-inchis); font-weight: bold; }
+        .form-group input { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+        .error-msg { color: #d9534f; font-size: 0.85rem; margin-top: 5px; display: none; }
+
+        /* Stil pentru zona de footer a formularului */
+        .auth-footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .link-auth {
+            color: var(--verde-masliniu);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .link-auth:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-section">
+        <a href="Home.html">
+            <img src="imagini/foto0.png" alt="Logo" class="logo-img">
+        </a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="Home.html">Acasă</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="auth-container">
+    <h2>Creează un cont nou</h2>
+    <form id="registerForm">
+        <div class="form-group">
+            <label>Nume</label>
+            <input type="text" id="nume" required>
+        </div>
+        <div class="form-group">
+            <label>Prenume</label>
+            <input type="text" id="prenume" required>
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="email" required>
+        </div>
+        <div class="form-group">
+            <label>Telefon</label>
+            <input type="text" id="telefon" required>
+        </div>
+        <div class="form-group">
+            <label>Parolă (min. 8 caractere)</label>
+            <input type="password" id="parola" required>
+        </div>
+        <div class="form-group">
+            <label>Confirmare Parolă</label>
+            <input type="password" id="confirmParola" required>
+        </div>
+        <p id="errorGeneral" class="error-msg">Vă rugăm să verificați datele introduse.</p>
+        
+        <button type="submit" class="btn-nav-auth" style="width: 100%;">Înregistrare</button>
+    </form>
+    
+    <div class="auth-footer">
+        <a href="login.html" class="link-auth">Ai deja cont? Loghează-te aici</a>
+    </div>
+</div>
+
+<script src="register.js"></script>
+</body>
+</html>

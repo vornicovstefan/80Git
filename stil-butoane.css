@@ -1,0 +1,23 @@
+/* Design unitar pentru butoanele de autentificare */
+.btn-nav-auth {
+    background-color: #6b8e23; /* Verdele specific butoanelor de rezervă */
+    color: #ffffff;
+    padding: 10px 22px;
+    border-radius: 5px; /* Aceeași rotunjire ca la cardurile de destinații */
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Tranziție fină pentru hover */
+}
+
+/* Efectul de hover conform identității vizuale a site-ului */
+.btn-nav-auth:hover {
+    background-color: #4a3423; /* Maro închis, la fel ca în secțiunea hero */
+    transform: translateY(-2px); /* Efect de ridicare la interacțiune */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #ffffff ;
+    opacity: 1 ;
+}
