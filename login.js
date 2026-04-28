@@ -12,7 +12,8 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
         alert(`Bine ai revenit, ${utilizatorGasit.prenume}!`);
         localStorage.setItem('isLoggedIn', 'true');
         localStorage.setItem('currentUser', utilizatorGasit.prenume);
-        window.location.href = 'Home.html';
+        const redirectParam = new URLSearchParams(window.location.search).get('redirect');
+        window.location.href = redirectParam ? decodeURIComponent(redirectParam) : 'Home.html';
     } else {
         alert("Email sau parolă incorectă!");
     }

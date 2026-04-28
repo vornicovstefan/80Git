@@ -1,7 +1,5 @@
 function arataMembru(rol) {
     const descriereDiv = document.getElementById('afisaj-descriere');
-    
-    
     let text = "";
 
     if (rol === 'manager') {
@@ -11,8 +9,6 @@ function arataMembru(rol) {
     } else if (rol === 'suport') {
         text = "<h3>Vornicov Vlad</h3><p>Zâmbetul din spatele telefonului, gata să te ajute cu orice rezervare.</p>";
     }
-
-    descriereDiv.innerHTML = text;
-    
+    descriereDiv.innerHTML = text; 
     console.log("A fost afișat profilul pentru: " + rol);
 }

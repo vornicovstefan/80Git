@@ -1,4 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
+    
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+    if (isLoggedIn !== 'true') {
+        const params2 = new URLSearchParams(window.location.search);
+        const redirectUrl = 'rezerva.html?' + params2.toString();
+        if (confirm('Trebuie să fii autentificat pentru a face o rezervare.\nApasă OK pentru a merge la pagina de autentificare.')) {
+            window.location.href = 'login.html?redirect=' + encodeURIComponent(redirectUrl);
+        } else {
+            window.location.href = 'Home.html';
+        }
+        return;
+    }
+
     const params = new URLSearchParams(window.location.search);
     const oras = params.get('oras');
     const pret = params.get('pret');
