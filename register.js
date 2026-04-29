@@ -6,38 +6,22 @@ document.getElementById('registerForm').addEventListener('submit', function(e) {
     const telefon = document.getElementById('telefon').value.trim();
     const parola = document.getElementById('parola').value;
     const confirmParola = document.getElementById('confirmParola').value;
-    const errorMsg = document.getElementById('errorGeneral');
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const telefonRegex = /^[0-9]+$/;
-    if (!nume || !prenume || !email || !telefon || !parola) {
-        alert("Toate câmpurile sunt obligatorii!");
-        return;
-    }
-    if (!emailRegex.test(email)) {
-        alert("Format email invalid!");
-        return;
-    }
-    if (!telefonRegex.test(telefon)) {
-        alert("Numărul de telefon trebuie să conțină doar cifre!");
-        return;
-    }
-    if (parola.length < 8) {
-        alert("Parola trebuie să aibă cel puțin 8 caractere!");
-        return;
-    }
-    if (parola !== confirmParola) {
-        alert("Parolele nu coincid!");
-        return;
-    }
+ 
+    if (!nume || !prenume || !email || !telefon || !parola) return;
+    if (!emailRegex.test(email)) return;
+    if (!telefonRegex.test(telefon)) return;
+    if (parola.length < 8) return;
+    if (parola !== confirmParola) return;
+ 
     let utilizatori = JSON.parse(localStorage.getItem('utilizatori')) || [];
-    if (utilizatori.find(u => u.email === email)) {
-        alert("Acest email este deja înregistrat!");
-        return;
-    }
+    if (utilizatori.find(u => u.email === email)) return;
+ 
     const utilizatorNou = { nume, prenume, email, telefon, parola };
     utilizatori.push(utilizatorNou);
     localStorage.setItem('utilizatori', JSON.stringify(utilizatori));
-
-    alert("Cont creat cu succes!");
+ 
     window.location.href = 'login.html';
 });
+ 
